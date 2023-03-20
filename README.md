@@ -135,6 +135,50 @@ export class HelloWorldBindingComponent {
 }
 ```
 
+## Injeção de dependências
+
+A injeção de dependência permite declarar as dependências de suas classes TypeScript sem cuidar de sua instanciação. Em vez disso, o Angular lida com a instanciação para você. Esse padrão de design permite que você escreva um código mais testável e flexível.
+
+Para ilustrar como a injeção de dependência funciona, considere o exemplo a seguir. O primeiro arquivo, logger.`service.ts`, define uma classe `Logger`. Essa classe contém uma função `writeCount` que registra um número no console.
+
+```.ts
+import { Injectable } from '@angular/core';
+
+@Injectable({providedIn: 'root'})
+export class Logger {
+  writeCount(count: number) {
+    console.warn(count);
+  }
+}
+```
+
+use o comando `ng generate service Logger` e `ng generate component hello-world-di` para gerar os arquivos padrões implementar este exemplo.
+
+Em seguida, o `arquivo hello-world-di.component.ts` define um componente Angular. Este componente contém um botão que utiliza a função `writeCount` da classe `Logger`. Para acessar essa função, o serviço Logger é injetado na classe `HelloWorldDI` adicionando logger private: Logger ao construtor.
+
+```.ts
+import { Component } from '@angular/core';
+import { Logger } from '../logger.service';
+
+
+@Component({
+  selector: 'app-hello-world-di',
+  templateUrl: './hello-world-di.component.html',
+  styleUrls: ['./hello-world-di.component.css']
+})
+export class HelloWorldDiComponent {
+  count = 0;
+
+  constructor(private logger: Logger){}
+
+  onLogMe() {
+    this.logger.writeCount(this.count);
+    this.count++;
+  }
+}
+```
+
+
 ## Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
