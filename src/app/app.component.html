@@ -2,21 +2,9 @@
  
 </style>
 
-<div class="content" role="main">
+<app-navbar></app-navbar>
 
-  <h2> Primeiro Projeto Angular </h2>
-  
-  <h4>Componente app-hello-world</h4>
-  <app-hello-world></app-hello-world>
-
-  <h4>Componente hello-world-interpolation</h4>
-  <hello-world-interpolation></hello-world-interpolation>
-  
-  <h4>Componente hello-world-binding</h4>
-  <hello-world-binding></hello-world-binding>
-
-  <h4>Injeção de dependência</h4>
-  <app-hello-world-di></app-hello-world-di>
+<div class="container mt-5">
+  <router-outlet></router-outlet>
+  <!-- Adiciona o conteúdo das rotas aqui-->
 </div>
-
-<router-outlet></router-outlet>
