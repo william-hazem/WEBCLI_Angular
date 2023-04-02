@@ -185,7 +185,10 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Execute `ng build` para compilar o projeto. Os artefatos de compilação serão armazenados no diretório `dist/`.
+
+### HTTP-Server
+Para testar a aplicação, utilize um servidor http de sua escolha(e.g: `apache`) ou instale o http-server do node utilizando `npm install http-server -g` abra o diretório `dist/<projeto>` gerado e execute `http-server`
 
 ## Running unit tests
 
