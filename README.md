@@ -202,3 +202,19 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
+# Esquemáticos
+
+Schematics é uma ferramenta de fluxo de trabalho para a web moderna; ele pode aplicar transformações ao seu projeto, como criar um novo componente ou atualizar seu código para corrigir alterações de quebra em uma dependência. Ou talvez você queira adicionar uma nova opção de configuração ou estrutura a um projeto existente. Para adicionar os esquemáticos execute `ng add @angular/material`
+
+Alguns esquemáticos já prontos vêm junto a biblioteca [(saiba mais)](https://material.angular.io/guide/schematics)
+`ng generate @angular/material:table <component-name>`
+
+# Diretivas estrutural
+
+Diretivas estruturais são diretivas que mudam o layout do DOM adicionando e removendo elementos DOM. O Angular fornece um conjunto de diretivas como o `ngIf`, o `ngFor`, `ngSwitch` que são comumente usadas em projetos Angular. As diretivas estruturais são precedidas por um asterísco, `*`, como `ngIf`,
+
+```.html
+<div *ngIf="hero" class="name">{{hero.name}}</div>
+```
+
+Angular cria um elemento `<ng-template>` e aplica a diretiva *ngIf nele, onde ela se torna uma ligação de propriedade em colchetes, `[ngIf]`. O restante do `<div>`, incluindo seu atributo de classe, é então movido para dentro do `<ng-template>`. (Observe que o Angular na verdade não cria um elemento `<ng-template>` real, mas em vez disso, apenas renderiza o elemento `<div>`.).

@@ -1,0 +1,17 @@
+
+<span *ngIf="!isListed">
+    <p> Consulte a base de herois da DC e Marvel. </p>
+    <button class="btn btn-primary mb-3" (click)="show()"> Listar Herois </button>
+</span>
+<button *ngIf="isListed" class="btn btn-primary mb-3" (click)="hide()"> Ocultar </button>
+
+<div *ngIf="isListed" class="hero-list">
+    <div *ngFor="let hero of heros" class="hero-item">
+        <img src={{hero.avatar_url}}>
+        <div>
+            <p class="lead"><strong> {{hero.name}} </strong></p>
+            <p class="text-dark text-opacity-75">{{hero.description}}</p>
+        </div>
+    </div>
+   
+</div>
