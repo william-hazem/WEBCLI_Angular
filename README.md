@@ -202,3 +202,9 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
+# Esquemáticos
+
+Schematics é uma ferramenta de fluxo de trabalho para a web moderna; ele pode aplicar transformações ao seu projeto, como criar um novo componente ou atualizar seu código para corrigir alterações de quebra em uma dependência. Ou talvez você queira adicionar uma nova opção de configuração ou estrutura a um projeto existente. Para adicionar os esquemáticos execute `ng add @angular/material`
+
+Alguns esquemáticos já prontos vêm junto a biblioteca [(saiba mais)](https://material.angular.io/guide/schematics)
+`ng generate @angular/material:nav <component-name>`

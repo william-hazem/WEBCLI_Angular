@@ -26,6 +26,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
+import { HeroListComponent } from './hero-list/hero-list.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -39,7 +41,8 @@ import { MatMenuModule } from '@angular/material/menu';
     GettingStartPageComponent,
     HomeComponent,
     PageNotFoundComponent,
-    DashboardComponent
+    DashboardComponent,
+    HeroListComponent
   ],
   imports: [
     BrowserModule,
@@ -56,7 +59,8 @@ import { MatMenuModule } from '@angular/material/menu';
     MatSortModule,
     MatGridListModule,
     MatCardModule,
-    MatMenuModule
+    MatMenuModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
